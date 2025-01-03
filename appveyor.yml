@@ -86,3 +86,11 @@ build_script:
       ..
   - cmake --build . --target qmapboxgl -- -j %NUMBER_OF_PROCESSORS%
   - clcache -s
+  
+artifacts:
+  - path: %APPVEYOR_BUILD_FOLDER%\build\qmapboxgl\Release\*   # 上传编译后的文件（根据实际路径调整）
+    name: Release Build
+    type: zip
+  - path: %APPVEYOR_BUILD_FOLDER%\build\qmapboxgl\Debug\*   # 如果需要调试版本
+    name: Debug Build
+    type: zip
