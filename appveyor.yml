@@ -91,6 +91,6 @@ artifacts:
   - path: "%APPVEYOR_BUILD_FOLDER%\build
   name: Release Build
   type: zip
-  #- path: "%APPVEYOR_BUILD_FOLDER%\build\qmapboxgl\Debug\*
+  # - path: "%APPVEYOR_BUILD_FOLDER%\build\qmapboxgl\Debug\*
   #name: Debug Build
   #type: zip
