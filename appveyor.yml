@@ -89,5 +89,5 @@ build_script:
   
 artifacts:
   - path: "%APPVEYOR_BUILD_FOLDER%\build"
-  name: Release Build
-  type: zip
+    name: Release Build
+    type: zip
