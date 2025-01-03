@@ -88,9 +88,9 @@ build_script:
   - clcache -s
   
 artifacts:
-  - path: "%APPVEYOR_BUILD_FOLDER%\build\*   # 上传编译后的文件（根据实际路径调整）
+  - path: "%APPVEYOR_BUILD_FOLDER%\build\*
   name: Release Build
   type: zip
-  #- path: "%APPVEYOR_BUILD_FOLDER%\build\qmapboxgl\Debug\*   # 如果需要调试版本
+  #- path: "%APPVEYOR_BUILD_FOLDER%\build\qmapboxgl\Debug\*
   #name: Debug Build
   #type: zip
