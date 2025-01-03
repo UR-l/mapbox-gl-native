@@ -88,6 +88,6 @@ build_script:
   - clcache -s
   
 artifacts:
-  - path: "%APPVEYOR_BUILD_FOLDER%\build"
+  - path: "C:\projects\mapbox-gl-native\build"
     name: Release Build
     type: zip
