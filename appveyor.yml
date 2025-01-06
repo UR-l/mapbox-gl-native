@@ -89,5 +89,5 @@ build_script:
   
 artifacts:
   - path: build
-    name: Release Build
+    name: qmapbox
     type: zip
