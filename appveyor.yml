@@ -88,6 +88,8 @@ build_script:
   - clcache -s
   
 artifacts:
-  - path: build
-    name: qmapbox
+  - path: 
+    - build\qmapboxgl.lib
+    - build\qmapboxgl.dll
+  - name: qmapbox
     type: zip
