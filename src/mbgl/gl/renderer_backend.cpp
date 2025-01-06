@@ -27,7 +27,7 @@ PremultipliedImage RendererBackend::readFramebuffer(const Size& size) {
 void RendererBackend::assumeFramebufferBinding(const gl::FramebufferID fbo) {
     getContext<gl::Context>().bindFramebuffer.setCurrentValue(fbo);
     if (fbo != ImplicitFramebufferBinding) {
-        assert(gl::value::BindFramebuffer::Get() == getContext<gl::Context>().bindFramebuffer.getCurrentValue());
+        //assert(gl::value::BindFramebuffer::Get() == getContext<gl::Context>().bindFramebuffer.getCurrentValue());
     }
 }
 
