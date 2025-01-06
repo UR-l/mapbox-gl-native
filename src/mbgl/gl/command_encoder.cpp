@@ -35,8 +35,8 @@ void CommandEncoder::pushDebugGroup(const char* name) {
 #ifndef NDEBUG
     if (auto debugging = context.getDebuggingExtension()) {
         if (debugging->pushDebugGroup) {
-            MBGL_CHECK_ERROR(debugging->pushDebugGroup(GL_DEBUG_SOURCE_APPLICATION, 0,
-                                                       platform::GLsizei(strlen(name)), name));
+            //MBGL_CHECK_ERROR(debugging->pushDebugGroup(GL_DEBUG_SOURCE_APPLICATION, 0,
+            //                                           platform::GLsizei(strlen(name)), name));
         } else if (debugging->pushGroupMarkerEXT) {
             MBGL_CHECK_ERROR(debugging->pushGroupMarkerEXT(platform::GLsizei(strlen(name) + 1), name));
         }
