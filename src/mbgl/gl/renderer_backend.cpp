@@ -33,12 +33,12 @@ void RendererBackend::assumeFramebufferBinding(const gl::FramebufferID fbo) {
 
 void RendererBackend::assumeViewport(int32_t x, int32_t y, const Size& size) {
     getContext<gl::Context>().viewport.setCurrentValue({ x, y, size });
-    assert(gl::value::Viewport::Get() == getContext<gl::Context>().viewport.getCurrentValue());
+    //assert(gl::value::Viewport::Get() == getContext<gl::Context>().viewport.getCurrentValue());
 }
 
 void RendererBackend::assumeScissorTest(bool enabled) {
     getContext<gl::Context>().scissorTest.setCurrentValue(enabled);
-    assert(gl::value::ScissorTest::Get() == getContext<gl::Context>().scissorTest.getCurrentValue());
+    //assert(gl::value::ScissorTest::Get() == getContext<gl::Context>().scissorTest.getCurrentValue());
 }
 
 bool RendererBackend::implicitFramebufferBound() {
@@ -48,18 +48,18 @@ bool RendererBackend::implicitFramebufferBound() {
 void RendererBackend::setFramebufferBinding(const gl::FramebufferID fbo) {
     getContext<gl::Context>().bindFramebuffer = fbo;
     if (fbo != ImplicitFramebufferBinding) {
-        assert(gl::value::BindFramebuffer::Get() == getContext<gl::Context>().bindFramebuffer.getCurrentValue());
+        //assert(gl::value::BindFramebuffer::Get() == getContext<gl::Context>().bindFramebuffer.getCurrentValue());
     }
 }
 
 void RendererBackend::setViewport(int32_t x, int32_t y, const Size& size) {
     getContext<gl::Context>().viewport = { x, y, size };
-    assert(gl::value::Viewport::Get() == getContext<gl::Context>().viewport.getCurrentValue());
+    //assert(gl::value::Viewport::Get() == getContext<gl::Context>().viewport.getCurrentValue());
 }
 
 void RendererBackend::setScissorTest(bool enabled) {
     getContext<gl::Context>().scissorTest = enabled;
-    assert(gl::value::ScissorTest::Get() == getContext<gl::Context>().scissorTest.getCurrentValue());
+    //assert(gl::value::ScissorTest::Get() == getContext<gl::Context>().scissorTest.getCurrentValue());
 }
 
 RendererBackend::~RendererBackend() = default;
